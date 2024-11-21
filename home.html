@@ -11,7 +11,7 @@
     <header>
         <h1>Vagas de Emprego</h1>
         <p>Encontre as melhores vagas, com destaque para TI Home Office!</p>
-        <button onclick="window.location.href = 'https://empregos-go.vercel.app/';">Sair</button>
+        <button id="logout-btn">Sair</button>
     </header>
 
     <div class="filter">
@@ -33,5 +33,18 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Função de logout do Google
+        function logout() {
+        const auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function() {
+            alert('Desconectado!');
+            // Redirecionar para a página inicial (home)
+            window.location.href = 'https://empregos-go.vercel.app/'; // Substitua com a URL da sua página home
+        });
+        // Configurar evento de logout para o botão
+        document.getElementById('logout-btn').onclick = logout;
+    }
+    </script>
 </body>
 </html>
