@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vagas de Emprego</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Vagas de Emprego</h1>
+        <p>Encontre as melhores vagas, com destaque para TI Home Office!</p>
+    </header>
+
+    <div class="filter">
+        <h2>Filtrar por:</h2>
+        <select id="job-type">
+            <option value="">Todos os tipos</option>
+            <option value="home-office">TI Home Office</option>
+            <option value="presencial">Presencial</option>
+            <option value="hibrido">Híbrido</option>
+        </select>
+    </div>
+
+    <section class="job-listings" id="job-listings">
+        <!-- As vagas serão carregadas aqui dinamicamente -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vagas de Emprego | Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

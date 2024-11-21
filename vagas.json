@@ -1,0 +1,39 @@
+[
+    {
+      "titulo": "Desenvolvedor Front-End (Home Office)",
+      "empresa": "Tech Solutions",
+      "experiencia": "2+ anos em JavaScript, React.",
+      "tipo": "home-office"
+    },
+    {
+      "titulo": "Analista de Suporte Técnico (Presencial)",
+      "empresa": "Network Systems",
+      "experiencia": "Suporte a sistemas operacionais e redes.",
+      "tipo": "presencial"
+    },
+    {
+      "titulo": "Engenheiro de Software (Home Office)",
+      "empresa": "DevCorp",
+      "experiencia": "3+ anos em desenvolvimento com Java, Python.",
+      "tipo": "home-office"
+    },
+    {
+      "titulo": "Gerente de TI (Híbrido)",
+      "empresa": "GlobalTech",
+      "experiencia": "Gestão de equipes e projetos de TI.",
+      "tipo": "hibrido"
+    },
+    {
+      "titulo": "Designer UX/UI (Home Office)",
+      "empresa": "Creative Studios",
+      "experiencia": "Design de interfaces e protótipos.",
+      "tipo": "home-office"
+    },
+    {
+      "titulo": "Frontend IA (Home Office)",
+      "empresa": "Creative Studios",
+      "experiencia": "Design de interfaces e protótipos.",
+      "tipo": "home-office"
+    }
+  ]
+  

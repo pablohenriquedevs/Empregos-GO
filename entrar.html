@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <!-- <script src="/app.js" defer></script> Referência ao script do Firebase -->
+       <!-- Carregue o Firebase SDK (v9+) -->
+    <script type="module">
+      // Importar os módulos do Firebase necessários
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+      import { getAuth, signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+
+// Configuração do Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyAdiMss6SPqGq83R-kxrmJRtfOa5yoILWU",
+    authDomain: "empregos-go-e42f3.firebaseapp.com",
+    projectId: "empregos-go-e42f3",
+    storageBucket: "empregos-go-e42f3.firebasestorage.app",
+    messagingSenderId: "483456268214",
+    appId: "1:483456268214:web:4d58a1877c2733e1d7f317"
+  };
+
+      // Inicializa o Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      // Função de login com Google
+      window.loginWithGoogle = function() {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            const user = result.user;
+            console.log('Usuário autenticado:', user.displayName);
+            window.location.href = './home.html'; // Redirecionar após login
+          })
+          .catch((error) => {
+            console.error('Erro de autenticação:', error.message);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex-container">
+      <main class="main">
+        <header>
+          <h1>Entrar</h1>
+          <p>Digite seus dados para entrar</p>
+        </header>
+        <hr />
+        <button onclick="loginWithGoogle()">Entrar com Google</button>
+      </main>
+    </div>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="no-scroll">
+    <div class="flex-container">
+      <main class="main">
+        <header>
+          <h1>Entrar</h1>
+          <p>Digite seus dados para entrar</p>
+        </header>
+        <hr />
+        <form action="./home.html" method="get">
+          <div class="login-inputs">
+            <label for="login">E-mail ou telefone</label>
+            <input
+              type="email"
+              name="login"
+              id="login"
+              placeholder="E-mail ou telefone"
+              required
+            />
+
+            <label for="pass">Senha</label>
+            <input
+              type="password"
+              name="pass"
+              id="pass"
+              placeholder="Senha"
+              required
+            />
+          </div>
+          <a href="recuperar-senha.html" target="_blank">Esqueceu a senha?</a>
+          <button type="submit">Entrar</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html> -->
