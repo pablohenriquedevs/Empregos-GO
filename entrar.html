@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entrar</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
     <!-- <script src="/app.js" defer></script> Referência ao script do Firebase -->
@@ -42,29 +43,6 @@ const firebaseConfig = {
       }
     </script>
   </head>
-  <body>
-    <div class="flex-container">
-      <main class="main">
-        <header>
-          <h1>Entrar</h1>
-          <p>Digite seus dados para entrar</p>
-        </header>
-        <hr />
-        <button onclick="loginWithGoogle()">Entrar com Google</button>
-      </main>
-    </div>
-  </body>
-</html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Entrar</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
   <body class="no-scroll">
     <div class="flex-container">
       <main class="main">
@@ -94,9 +72,12 @@ const firebaseConfig = {
             />
           </div>
           <a href="recuperar-senha.html" target="_blank">Esqueceu a senha?</a>
-          <button type="submit">Entrar</button>
+          <button type="submit">Entrar</button> 
+          <p> ou </p>
+          <h2> Entrar com o Google </h2>
+          <button onclick="loginWithGoogle()">Entrar com Google</button>
         </form>
       </main>
     </div>
   </body>
-</html> -->
+</html>
