@@ -31,35 +31,21 @@
     <footer>
         <p>&copy; 2024 Vagas de Emprego | Todos os direitos reservados.</p>
     </footer>
-
     <!-- Carregar a biblioteca de autenticação do Google -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-
+    <script src="script.js"></script>
     <script>
-        // Função de inicialização do Google Auth
-        function initGoogleAuth() {
-            gapi.load('auth2', function() {
-                gapi.auth2.init({
-                    client_id: 'YOUR_GOOGLE_CLIENT_ID' // Substitua com o seu Client ID do Google
-                });
-            });
-        }
-
         // Função de logout do Google
         function logout() {
-            const auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function() {
-                alert('Desconectado!');
-                // Redirecionar para a página inicial (home)
-                window.location.href = 'https://empregos-go.vercel.app/'; // Substitua com a URL da sua página home
-            });
-        }
-
+        const auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function() {
+            alert('Desconectado!');
+            // Redirecionar para a página inicial (home)
+            window.location.href = 'https://empregos-go.vercel.app/'; // Substitua com a URL da sua página home
+        });
         // Configurar evento de logout para o botão
         document.getElementById('logout-btn').onclick = logout;
-
-        // Inicializar a API do Google Auth ao carregar a página
-        window.onload = initGoogleAuth;
+    }
     </script>
 </body>
 </html>
